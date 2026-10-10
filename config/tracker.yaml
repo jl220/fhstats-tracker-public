@@ -1,0 +1,61 @@
+app:
+  player_name: "SetYourGamertag"
+  log_level: "INFO"
+
+capture:
+  backend: "mss"
+  monitor_index: 0
+  auto_detect_monitors: true
+  interval_seconds: 1.0
+  output_dir: "captures"
+  max_storage_gb: 1
+
+detector:
+  templates_dir: "templates"
+  threshold: 0.86
+  thresholds_by_type:
+    event_registration: 0.77
+    starting_grid: 0.92
+    race_result: 0.78
+    championship_result: 0.92
+  cooldown_seconds_by_type:
+    event_registration: 5
+    matchmaking_search: 5
+    matchmaking_found: 5
+  cooldown_seconds: 45
+  resize_scales: [0.9, 1.0, 1.1]
+
+history:
+  enabled: true
+  path: "data/history/results.jsonl"
+
+api:
+  enabled: true
+  diagnostics_enabled: true
+  base_url: "https://fhstats.com"
+  api_key: null
+  timeout_seconds: 5
+ocr:
+  enabled: true
+  tesseract_cmd: "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+
+recording:
+  enabled: false
+  mode: "off"
+  output_dir: "data/recordings"
+  max_storage_gb: 20
+  framerate: 60
+  width: 1920
+  height: 1080
+  quality: 20
+  keyframe_interval_seconds: 2
+  capture_audio: true
+  ffmpeg_path: "runtime/ffmpeg/bin/ffmpeg.exe"
+  audio_helper_path: "runtime/audio/FHStatsAudioCapture.exe"
+  video_sync_offset_seconds: 0.08
+
+overlay:
+  enabled: true
+  opacity: 0.82
+  scale: 1.0
+  duration_seconds: 35

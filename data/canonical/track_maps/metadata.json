@@ -1,0 +1,1326 @@
+[
+  {
+    "id": "cross-country:legend-island-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 1,
+    "slug": "legend-island-cross-country-circuit",
+    "name_en": "Legend Island Cross Country Circuit",
+    "name_es": "Circuito campo a través de la isla legendaria",
+    "image": "images/cross_country/legend-island-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:13.638771+00:00"
+  },
+  {
+    "id": "cross-country:naruo-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 2,
+    "slug": "naruo-cross-country-circuit",
+    "name_en": "Naruo Cross Country Circuit",
+    "name_es": "Circuito campo a través de Naruo",
+    "image": "images/cross_country/naruo-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:14.489434+00:00"
+  },
+  {
+    "id": "cross-country:snow-forest-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 3,
+    "slug": "snow-forest-cross-country-circuit",
+    "name_en": "Snow Forest Cross Country Circuit",
+    "name_es": "Circuito campo a través del bosque nevado",
+    "image": "images/cross_country/snow-forest-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:15.335848+00:00"
+  },
+  {
+    "id": "cross-country:oka-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 4,
+    "slug": "oka-cross-country-circuit",
+    "name_en": "Oka Cross Country Circuit",
+    "name_es": "Circuito campo a través de Oka",
+    "image": "images/cross_country/oka-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:16.188671+00:00"
+  },
+  {
+    "id": "cross-country:edogawa-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 5,
+    "slug": "edogawa-cross-country-circuit",
+    "name_en": "Edogawa Cross Country Circuit",
+    "name_es": "Circuito campo a través de Edogawa",
+    "image": "images/cross_country/edogawa-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:17.039919+00:00"
+  },
+  {
+    "id": "cross-country:city-docks-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 6,
+    "slug": "city-docks-cross-country-circuit",
+    "name_en": "City Docks Cross Country Circuit",
+    "name_es": "Circuito campo a través de los muelles",
+    "image": "images/cross_country/city-docks-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:17.891062+00:00"
+  },
+  {
+    "id": "cross-country:stadium-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 7,
+    "slug": "stadium-cross-country-circuit",
+    "name_en": "Stadium Cross Country Circuit",
+    "name_es": "Circuito campo a través del estadio",
+    "image": "images/cross_country/stadium-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:18.738223+00:00"
+  },
+  {
+    "id": "cross-country:nangan-cross-country-circuit",
+    "discipline": "cross-country",
+    "index": 8,
+    "slug": "nangan-cross-country-circuit",
+    "name_en": "Nangan Cross Country Circuit",
+    "name_es": "Circuito campo a través de Nangan",
+    "image": "images/cross_country/nangan-cross-country-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:19.586269+00:00"
+  },
+  {
+    "id": "cross-country:soni-highlands-cross-country",
+    "discipline": "cross-country",
+    "index": 9,
+    "slug": "soni-highlands-cross-country",
+    "name_en": "Soni Highlands Cross Country",
+    "name_es": "Campo a través de las tierras altas de Soni",
+    "image": "images/cross_country/soni-highlands-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:20.436615+00:00"
+  },
+  {
+    "id": "cross-country:ruriko-ji-cross-country",
+    "discipline": "cross-country",
+    "index": 10,
+    "slug": "ruriko-ji-cross-country",
+    "name_en": "Ruriko-ji Cross Country",
+    "name_es": "Campo a través de Ruriko-ji",
+    "image": "images/cross_country/ruriko-ji-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:21.284232+00:00"
+  },
+  {
+    "id": "cross-country:takashiro-cross-country",
+    "discipline": "cross-country",
+    "index": 11,
+    "slug": "takashiro-cross-country",
+    "name_en": "Takashiro Cross Country",
+    "name_es": "Campo a través de Takashiro",
+    "image": "images/cross_country/takashiro-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:22.129168+00:00"
+  },
+  {
+    "id": "cross-country:tateyama-alpine-cross-country",
+    "discipline": "cross-country",
+    "index": 12,
+    "slug": "tateyama-alpine-cross-country",
+    "name_en": "Tateyama Alpine Cross Country",
+    "name_es": "Campo a través alpino de Tateyama",
+    "image": "images/cross_country/tateyama-alpine-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:22.975748+00:00"
+  },
+  {
+    "id": "cross-country:wind-farm-cross-country",
+    "discipline": "cross-country",
+    "index": 13,
+    "slug": "wind-farm-cross-country",
+    "name_en": "Wind Farm Cross Country",
+    "name_es": "Campo a través del parque eólico",
+    "image": "images/cross_country/wind-farm-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:23.824012+00:00"
+  },
+  {
+    "id": "cross-country:yahikoyama-cross-country",
+    "discipline": "cross-country",
+    "index": 14,
+    "slug": "yahikoyama-cross-country",
+    "name_en": "Yahikoyama Cross Country",
+    "name_es": "Campo a través de Yahikoyama",
+    "image": "images/cross_country/yahikoyama-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:24.669861+00:00"
+  },
+  {
+    "id": "cross-country:shimanoyama-cross-country",
+    "discipline": "cross-country",
+    "index": 15,
+    "slug": "shimanoyama-cross-country",
+    "name_en": "Shimanoyama Cross Country",
+    "name_es": "Campo a través de Shimanoyama",
+    "image": "images/cross_country/shimanoyama-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:25.515971+00:00"
+  },
+  {
+    "id": "cross-country:shinjuku-gyoen-cross-country",
+    "discipline": "cross-country",
+    "index": 16,
+    "slug": "shinjuku-gyoen-cross-country",
+    "name_en": "Shinjuku Gyoen Cross Country",
+    "name_es": "Campo a través de Shinjuku Gyoen",
+    "image": "images/cross_country/shinjuku-gyoen-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:26.362687+00:00"
+  },
+  {
+    "id": "cross-country:temple-cross-country",
+    "discipline": "cross-country",
+    "index": 17,
+    "slug": "temple-cross-country",
+    "name_en": "Temple Cross Country",
+    "name_es": "Campo a través del templo",
+    "image": "images/cross_country/temple-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:27.208112+00:00"
+  },
+  {
+    "id": "cross-country:izu-cross-country",
+    "discipline": "cross-country",
+    "index": 18,
+    "slug": "izu-cross-country",
+    "name_en": "Izu Cross Country",
+    "name_es": "Campo a través de Izu",
+    "image": "images/cross_country/izu-cross-country.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:28.053130+00:00"
+  },
+  {
+    "id": "cross-country:the-titan",
+    "discipline": "cross-country",
+    "index": 19,
+    "slug": "the-titan",
+    "name_en": "The Titan",
+    "name_es": "El Titán",
+    "image": "images/cross_country/the-titan.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:28.897905+00:00"
+  },
+  {
+    "id": "dirt:chiheisen-scramble",
+    "discipline": "dirt",
+    "index": 1,
+    "slug": "chiheisen-scramble",
+    "name_en": "Chiheisen Scramble",
+    "name_es": "Circuito de tierra de Chiheisen",
+    "image": "images/dirt/chiheisen-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:54.223296+00:00"
+  },
+  {
+    "id": "dirt:sotoyama-scramble",
+    "discipline": "dirt",
+    "index": 2,
+    "slug": "sotoyama-scramble",
+    "name_en": "Sotoyama Scramble",
+    "name_es": "Circuito de tierra de Sotoyama",
+    "image": "images/dirt/sotoyama-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:55.074638+00:00"
+  },
+  {
+    "id": "dirt:hirosaki-scramble",
+    "discipline": "dirt",
+    "index": 3,
+    "slug": "hirosaki-scramble",
+    "name_en": "Hirosaki Scramble",
+    "name_es": "Circuito de tierra de Hirosaki",
+    "image": "images/dirt/hirosaki-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:55.921785+00:00"
+  },
+  {
+    "id": "dirt:sunflower-scramble",
+    "discipline": "dirt",
+    "index": 4,
+    "slug": "sunflower-scramble",
+    "name_en": "Sunflower Scramble",
+    "name_es": "Circuito de tierra de los Girasoles",
+    "image": "images/dirt/sunflower-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:56.766772+00:00"
+  },
+  {
+    "id": "dirt:bamboo-forest-scramble",
+    "discipline": "dirt",
+    "index": 5,
+    "slug": "bamboo-forest-scramble",
+    "name_en": "Bamboo Forest Scramble",
+    "name_es": "Circuito de tierra del Bosque de Bambu",
+    "image": "images/dirt/bamboo-forest-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:57.616267+00:00"
+  },
+  {
+    "id": "dirt:ine-scramble",
+    "discipline": "dirt",
+    "index": 6,
+    "slug": "ine-scramble",
+    "name_en": "Ine Scramble",
+    "name_es": "Circuito de tierra de Ine",
+    "image": "images/dirt/ine-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:58.468690+00:00"
+  },
+  {
+    "id": "dirt:horizon-stadium-scramble",
+    "discipline": "dirt",
+    "index": 7,
+    "slug": "horizon-stadium-scramble",
+    "name_en": "Horizon Stadium Scramble",
+    "name_es": "Circuito de tierra del Estadio Horizon",
+    "image": "images/dirt/horizon-stadium-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:59.323390+00:00"
+  },
+  {
+    "id": "dirt:tayaki-scramble",
+    "discipline": "dirt",
+    "index": 8,
+    "slug": "tayaki-scramble",
+    "name_en": "Taiyaki Scramble",
+    "name_es": "Circuito de tierra de Tayaki",
+    "aliases": [
+      "Tayaki Scramble"
+    ],
+    "image": "images/dirt/tayaki-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:00.177170+00:00"
+  },
+  {
+    "id": "dirt:kawazu-nanadaru-scramble",
+    "discipline": "dirt",
+    "index": 9,
+    "slug": "kawazu-nanadaru-scramble",
+    "name_en": "Kawazu Nanadaru Scramble",
+    "name_es": "Circuito de tierra de Kawazu Nanadaru",
+    "image": "images/dirt/kawazu-nanadaru-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:01.021552+00:00"
+  },
+  {
+    "id": "dirt:sekibe-scramble",
+    "discipline": "dirt",
+    "index": 10,
+    "slug": "sekibe-scramble",
+    "name_en": "Sekibe Scramble",
+    "name_es": "Circuito de tierra de Sekibe",
+    "image": "images/dirt/sekibe-scramble.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:01.869958+00:00"
+  },
+  {
+    "id": "dirt:nukabira-trail",
+    "discipline": "dirt",
+    "index": 11,
+    "slug": "nukabira-trail",
+    "name_en": "Nukabira Trail",
+    "name_es": "Tramo de Nukabira",
+    "image": "images/dirt/nukabira-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:02.715587+00:00"
+  },
+  {
+    "id": "dirt:waterfall-trail",
+    "discipline": "dirt",
+    "index": 12,
+    "slug": "waterfall-trail",
+    "name_en": "Waterfall Trail",
+    "name_es": "Tramo de la cascada",
+    "image": "images/dirt/waterfall-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:03.561477+00:00"
+  },
+  {
+    "id": "dirt:hokubu-trail",
+    "discipline": "dirt",
+    "index": 13,
+    "slug": "hokubu-trail",
+    "name_en": "Hokubu Trail",
+    "name_es": "Tramo de Hokubu",
+    "image": "images/dirt/hokubu-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:04.407957+00:00"
+  },
+  {
+    "id": "dirt:ito-trail",
+    "discipline": "dirt",
+    "index": 14,
+    "slug": "ito-trail",
+    "name_en": "Ito Trail",
+    "name_es": "Tramo de Ito",
+    "image": "images/dirt/ito-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:05.258739+00:00"
+  },
+  {
+    "id": "dirt:airfield-trail",
+    "discipline": "dirt",
+    "index": 15,
+    "slug": "airfield-trail",
+    "name_en": "Airfield Trail",
+    "name_es": "Tramo del Aerodromo",
+    "image": "images/dirt/airfield-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:06.103395+00:00"
+  },
+  {
+    "id": "dirt:cherry-fields-trail",
+    "discipline": "dirt",
+    "index": 16,
+    "slug": "cherry-fields-trail",
+    "name_en": "Cherry Field Trail",
+    "name_es": "Tramo del campo de cerezos",
+    "aliases": [
+      "Cherry Fields Trail"
+    ],
+    "image": "images/dirt/cherry-fields-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:06.950166+00:00"
+  },
+  {
+    "id": "dirt:kinkaku-ji-trail",
+    "discipline": "dirt",
+    "index": 17,
+    "slug": "kinkaku-ji-trail",
+    "name_en": "Kinkaku-ji Trail",
+    "name_es": "Tramo de Kinkaku-ji",
+    "image": "images/dirt/kinkaku-ji-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:07.795373+00:00"
+  },
+  {
+    "id": "dirt:legend-island-trail",
+    "discipline": "dirt",
+    "index": 18,
+    "slug": "legend-island-trail",
+    "name_en": "Legend Island Trail",
+    "name_es": "Tramo de la isla legendaria",
+    "image": "images/dirt/legend-island-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:08.645005+00:00"
+  },
+  {
+    "id": "dirt:oyashirazu-trail",
+    "discipline": "dirt",
+    "index": 19,
+    "slug": "oyashirazu-trail",
+    "name_en": "Oyashirazu Trail",
+    "name_es": "Tramo de Oyashirazu",
+    "image": "images/dirt/oyashirazu-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:09.491509+00:00"
+  },
+  {
+    "id": "dirt:takashiro-trail",
+    "discipline": "dirt",
+    "index": 20,
+    "slug": "takashiro-trail",
+    "name_en": "Takashiro Trail",
+    "name_es": "Tramo de Takashiro",
+    "image": "images/dirt/takashiro-trail.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:10.337649+00:00"
+  },
+  {
+    "id": "dirt:gauntlet",
+    "discipline": "dirt",
+    "index": 21,
+    "slug": "gauntlet",
+    "name_en": "The Gauntlet",
+    "name_es": "El Gran Desafio",
+    "image": "images/dirt/gauntlet.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:11.184649+00:00"
+  },
+  {
+    "id": "road:highway-circuit",
+    "discipline": "road",
+    "index": 1,
+    "slug": "highway-circuit",
+    "name_en": "Highway Circuit",
+    "name_es": "Circuito de autopista",
+    "image": "images/road/highway-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:33.939910+00:00"
+  },
+  {
+    "id": "road:narai-juku-circuit",
+    "discipline": "road",
+    "index": 2,
+    "slug": "narai-juku-circuit",
+    "name_en": "Narai-Juku Circuit",
+    "name_es": "Circuito de Narai-juku",
+    "aliases": [
+      "Narai-juku Circuit"
+    ],
+    "image": "images/road/narai-juku-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:34.791270+00:00"
+  },
+  {
+    "id": "road:shirakawa-circuit",
+    "discipline": "road",
+    "index": 3,
+    "slug": "shirakawa-circuit",
+    "name_en": "Shirakawa Circuit",
+    "name_es": "Circuito de Shirakawa",
+    "image": "images/road/shirakawa-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:35.643005+00:00"
+  },
+  {
+    "id": "road:shimanoyama-circuit",
+    "discipline": "road",
+    "index": 4,
+    "slug": "shimanoyama-circuit",
+    "name_en": "Shimanoyama Circuit",
+    "name_es": "Circuito de Shimanoyama",
+    "image": "images/road/shimanoyama-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:36.493603+00:00"
+  },
+  {
+    "id": "road:hokubu-circuit",
+    "discipline": "road",
+    "index": 5,
+    "slug": "hokubu-circuit",
+    "name_en": "Hokubu Circuit",
+    "name_es": "Circuito de Hokubu",
+    "image": "images/road/hokubu-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:37.348352+00:00"
+  },
+  {
+    "id": "road:soni-circuit",
+    "discipline": "road",
+    "index": 6,
+    "slug": "soni-circuit",
+    "name_en": "Soni Circuit",
+    "name_es": "Circuito de Soni",
+    "image": "images/road/soni-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:38.197491+00:00"
+  },
+  {
+    "id": "road:daikoku-circuit",
+    "discipline": "road",
+    "index": 7,
+    "slug": "daikoku-circuit",
+    "name_en": "Daikoku Circuit",
+    "name_es": "Circuito de Daikoku",
+    "image": "images/road/daikoku-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:39.045960+00:00"
+  },
+  {
+    "id": "road:electric-town-circuit",
+    "discipline": "road",
+    "index": 8,
+    "slug": "electric-town-circuit",
+    "name_en": "Electric Town Circuit",
+    "name_es": "Circuito del barrio electronico",
+    "image": "images/road/electric-town-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:39.892378+00:00"
+  },
+  {
+    "id": "road:legendary-island-circuit",
+    "discipline": "road",
+    "index": 9,
+    "slug": "legendary-island-circuit",
+    "name_en": "Legend Island Circuit",
+    "name_es": "Circuito de la isla legendaria",
+    "aliases": [
+      "Legendary Island Circuit"
+    ],
+    "image": "images/road/legendary-island-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:40.741956+00:00"
+  },
+  {
+    "id": "road:irokawa-circuit",
+    "discipline": "road",
+    "index": 10,
+    "slug": "irokawa-circuit",
+    "name_en": "Irokawa Circuit",
+    "name_es": "Circuito de Irokawa",
+    "image": "images/road/irokawa-circuit.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:41.592761+00:00"
+  },
+  {
+    "id": "road:festival-sprint",
+    "discipline": "road",
+    "index": 11,
+    "slug": "festival-sprint",
+    "name_en": "Festival Sprint",
+    "name_es": "Carrera por el festival",
+    "image": "images/road/festival-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:42.441239+00:00"
+  },
+  {
+    "id": "road:venus-sprint",
+    "discipline": "road",
+    "index": 12,
+    "slug": "venus-sprint",
+    "name_en": "Venus Sprint",
+    "name_es": "Carrera por Venus",
+    "image": "images/road/venus-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:43.287786+00:00"
+  },
+  {
+    "id": "road:seaside-park-sprint",
+    "discipline": "road",
+    "index": 13,
+    "slug": "seaside-park-sprint",
+    "name_en": "Seaside Park Sprint",
+    "name_es": "Carrera por el parque de la costa",
+    "image": "images/road/seaside-park-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:44.131411+00:00"
+  },
+  {
+    "id": "road:ito-sprint",
+    "discipline": "road",
+    "index": 14,
+    "slug": "ito-sprint",
+    "name_en": "Ito Sprint",
+    "name_es": "Carrera por Ito",
+    "image": "images/road/ito-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:44.979163+00:00"
+  },
+  {
+    "id": "road:tateyama-kurobe-sprint",
+    "discipline": "road",
+    "index": 15,
+    "slug": "tateyama-kurobe-sprint",
+    "name_en": "Tateyama Kurobe Sprint",
+    "name_es": "Carrera por Tateyama Kurobe",
+    "image": "images/road/tateyama-kurobe-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:45.827723+00:00"
+  },
+  {
+    "id": "road:shimanoyama-sprint",
+    "discipline": "road",
+    "index": 16,
+    "slug": "shimanoyama-sprint",
+    "name_en": "Shimanoyama Sprint",
+    "name_es": "Carrera por Shimanoyama",
+    "image": "images/road/shimanoyama-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:46.681055+00:00"
+  },
+  {
+    "id": "road:satta-sprint",
+    "discipline": "road",
+    "index": 17,
+    "slug": "satta-sprint",
+    "name_en": "Satta Sprint",
+    "name_es": "Carrera por Satta",
+    "image": "images/road/satta-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:47.524423+00:00"
+  },
+  {
+    "id": "road:coastline-sprint",
+    "discipline": "road",
+    "index": 18,
+    "slug": "coastline-sprint",
+    "name_en": "Coastline Sprint",
+    "name_es": "Carrera por la costa",
+    "image": "images/road/coastline-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:48.378433+00:00"
+  },
+  {
+    "id": "road:tokyo-train-sprint",
+    "discipline": "road",
+    "index": 19,
+    "slug": "tokyo-train-sprint",
+    "name_en": "Tokyo Railway Sprint",
+    "name_es": "Carrera del tren de Tokio",
+    "aliases": [
+      "Tokyo Train Sprint"
+    ],
+    "image": "images/road/tokyo-train-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:49.226999+00:00"
+  },
+  {
+    "id": "road:shikisai-sprint",
+    "discipline": "road",
+    "index": 20,
+    "slug": "shikisai-sprint",
+    "name_en": "Shikisai Sprint",
+    "name_es": "Carrera por Shikisai",
+    "image": "images/road/shikisai-sprint.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:50.080341+00:00"
+  },
+  {
+    "id": "road:colossus",
+    "discipline": "road",
+    "index": 21,
+    "slug": "colossus",
+    "name_en": "The Colossus",
+    "name_es": "El Coloso",
+    "image": "images/road/colossus.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:50.926830+00:00"
+  },
+  {
+    "id": "road:goliath",
+    "discipline": "road",
+    "index": 22,
+    "slug": "goliath",
+    "name_en": "The Goliath",
+    "name_es": "La Goliat",
+    "image": "images/road/goliath.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:40:51.774101+00:00"
+  },
+  {
+    "id": "street:daikoku-chase",
+    "discipline": "street",
+    "index": 1,
+    "slug": "daikoku-chase",
+    "name_en": "Daikoku Chase",
+    "name_es": "Persecución de Daikoku",
+    "image": "images/street/daikoku-chase.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:32.146915+00:00"
+  },
+  {
+    "id": "street:norikura-descent",
+    "discipline": "street",
+    "index": 2,
+    "slug": "norikura-descent",
+    "name_en": "Norikura Descent",
+    "name_es": "Descenso de Norikura",
+    "image": "images/street/norikura-descent.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:32.995529+00:00"
+  },
+  {
+    "id": "street:nachi-run",
+    "discipline": "street",
+    "index": 3,
+    "slug": "nachi-run",
+    "name_en": "Nachi Run",
+    "name_es": "Carrera de Nachi",
+    "image": "images/street/nachi-run.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:33.840929+00:00"
+  },
+  {
+    "id": "street:hokubu-ascent",
+    "discipline": "street",
+    "index": 4,
+    "slug": "hokubu-ascent",
+    "name_en": "Hokubu Ascent",
+    "name_es": "Ascenso de Hokubu",
+    "image": "images/street/hokubu-ascent.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:34.688082+00:00"
+  },
+  {
+    "id": "street:okishinaimura-run",
+    "discipline": "street",
+    "index": 5,
+    "slug": "okishinaimura-run",
+    "name_en": "Okishinaimura Run",
+    "name_es": "Carrera de Okishinaimura",
+    "image": "images/street/okishinaimura-run.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:35.543063+00:00"
+  },
+  {
+    "id": "street:sunflower-charge",
+    "discipline": "street",
+    "index": 6,
+    "slug": "sunflower-charge",
+    "name_en": "Sunflower Charge",
+    "name_es": "Carrera de los girasoles",
+    "image": "images/street/sunflower-charge.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:36.389253+00:00"
+  },
+  {
+    "id": "street:kita-ine",
+    "discipline": "street",
+    "index": 7,
+    "slug": "kita-ine",
+    "name_en": "Kita Ine",
+    "name_es": "Kita Ine",
+    "image": "images/street/kita-ine.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:37.236077+00:00"
+  },
+  {
+    "id": "street:rainbow-bridge-descent",
+    "discipline": "street",
+    "index": 8,
+    "slug": "rainbow-bridge-descent",
+    "name_en": "Rainbow Bridge Descent",
+    "name_es": "Descenso del Puente Arcoíris",
+    "image": "images/street/rainbow-bridge-descent.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:38.078872+00:00"
+  },
+  {
+    "id": "street:shimanoyama-charge",
+    "discipline": "street",
+    "index": 9,
+    "slug": "shimanoyama-charge",
+    "name_en": "Shimanoyama Charge",
+    "name_es": "Carrera de Shimanoyama",
+    "image": "images/street/shimanoyama-charge.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:38.922461+00:00"
+  },
+  {
+    "id": "street:festival-chase",
+    "discipline": "street",
+    "index": 10,
+    "slug": "festival-chase",
+    "name_en": "Festival Chase",
+    "name_es": "Persecución del festival",
+    "image": "images/street/festival-chase.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:39.771964+00:00"
+  },
+  {
+    "id": "street:matsumi-climb",
+    "discipline": "street",
+    "index": 11,
+    "slug": "matsumi-climb",
+    "name_en": "Matsumi Climb",
+    "name_es": "Ascenso de Matsumi",
+    "image": "images/street/matsumi-climb.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:40.618498+00:00"
+  },
+  {
+    "id": "street:minami-chase",
+    "discipline": "street",
+    "index": 12,
+    "slug": "minami-chase",
+    "name_en": "Minami Chase",
+    "name_es": "Persecución de Minami",
+    "image": "images/street/minami-chase.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:41.466980+00:00"
+  },
+  {
+    "id": "street:river-descent",
+    "discipline": "street",
+    "index": 13,
+    "slug": "river-descent",
+    "name_en": "River Descent",
+    "name_es": "Descenso del río",
+    "image": "images/street/river-descent.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:42.313311+00:00"
+  },
+  {
+    "id": "street:cedar-run",
+    "discipline": "street",
+    "index": 14,
+    "slug": "cedar-run",
+    "name_en": "Cedar Run",
+    "name_es": "Carrera de los cedros",
+    "image": "images/street/cedar-run.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:43.157529+00:00"
+  },
+  {
+    "id": "street:tokyo-city-docks-charge",
+    "discipline": "street",
+    "index": 15,
+    "slug": "tokyo-city-docks-charge",
+    "name_en": "Tokyo City Docks Charge",
+    "name_es": "Carrera de los muelles de Tokio",
+    "image": "images/street/tokyo-city-docks-charge.png",
+    "source": "forza-rivals-small-thumbnail",
+    "crop": {
+      "x": 483,
+      "y": 967,
+      "width": 314,
+      "height": 196
+    },
+    "captured_at": "2026-07-12T21:41:44.005235+00:00"
+  }
+]

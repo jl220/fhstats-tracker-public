@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forza-horizon-tracker"
+version = "0.4.12"
+description = "Automatic Forza Horizon online race result tracker"
+requires-python = ">=3.13"
+dependencies = [
+  "opencv-python>=4.10",
+  "mss>=9.0",
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+  "requests>=2.32",
+  "pytesseract>=0.3.13",
+  "pystray>=0.19",
+  "Pillow>=10.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["apps/tracker-desktop/src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["apps/tracker-desktop/src", "apps"]
+norecursedirs = [".venv", ".git", ".pytest_cache", ".codex-tmp", ".pytest-*", ".test-tmp*", "tmp", "release", "web", "build", "dist"]
+[project.scripts]
+fhstats-tracker = "forza_tracker.ui.app:main"

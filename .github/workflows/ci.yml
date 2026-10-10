@@ -1,0 +1,30 @@
+name: Desktop checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-desktop:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    env:
+      FHSTATS_TRACKER_DATA_DIR: ${{ runner.temp }}/tracker-test-data
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install desktop and test dependencies
+        run: python -m pip install -e ".[dev]"
+      - name: Validate public desktop source
+        run: python -m pytest tests -q --basetemp .test-tmp-ci
+      - name: Verify installed desktop entrypoints
+        run: python scripts/check_desktop_startup.py
