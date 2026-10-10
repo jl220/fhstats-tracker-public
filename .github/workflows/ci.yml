@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 15
     env:
-      FHSTATS_TRACKER_DATA_DIR: ${{ runner.temp }}/tracker-test-data
+      FHSTATS_TRACKER_DATA_DIR: .test-tmp-user-data
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
