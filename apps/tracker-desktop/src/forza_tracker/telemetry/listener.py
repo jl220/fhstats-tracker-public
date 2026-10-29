@@ -60,10 +60,9 @@ def listen_forza_horizon_6_udp(
     last_packet: ForzaHorizonTelemetry | None = None
     last_write_warning = float('-inf')
 
-    write_telemetry_status("listening", message=f"Listening on {host}:{port}", path=status_path)
-
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
         sock.bind((host, port))
+        write_telemetry_status("listening", message=f"Listening on {host}:{port}", path=status_path)
         sock.settimeout(1.0)
         output_file = output_path.open("a", encoding="utf-8") if output_path is not None else None
         try:

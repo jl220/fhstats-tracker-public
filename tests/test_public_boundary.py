@@ -1,9 +1,6 @@
 from __future__ import annotations
 
 import importlib.util
-import ast
-import inspect
-import textwrap
 from pathlib import Path
 
 
@@ -26,24 +23,8 @@ def test_private_modules_cannot_be_imported() -> None:
         assert importlib.util.find_spec("forza_tracker." + "pre" + "mium_" + suffix) is None
 
 
-def test_garage_adapter_is_standalone() -> None:
-    from forza_tracker.garage.runner import GARAGE_PROFILE_PATH, run_garage_scan_script
-    from forza_tracker.garage.scanner import GarageScreenProfile
-
-    assert callable(run_garage_scan_script)
-    profile = GarageScreenProfile.load(ROOT / GARAGE_PROFILE_PATH)
-    assert {"screen_marker", "selected_card", "navigation_strip"} <= profile.regions.keys()
 
 
-def test_dashboard_mounts_the_standalone_garage() -> None:
-    from forza_tracker.ui.app import TrackerDashboard
-
-    tree = ast.parse(textwrap.dedent(inspect.getsource(TrackerDashboard._build_layout)))
-    assert any(
-        isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)
-        and node.func.attr == "_build_garage_page"
-        for node in ast.walk(tree)
-    )
 
 
 def test_public_navigation_contains_all_desktop_pages() -> None:
@@ -51,5 +32,12 @@ def test_public_navigation_contains_all_desktop_pages() -> None:
 
     assert visible_page_specs() == PAGE_SPECS
     assert {spec[0] for spec in PAGE_SPECS} == {
-        "home", "history", "videos", "tierlist", "rivals", "garage", "news", "settings"
+        "home", "history", "videos", "tierlist", "rivals", "news", "settings"
     }
+
+
+def test_retired_scanner_is_not_shipped() -> None:
+    assert importlib.util.find_spec("forza_tracker.garage.scanner") is None
+    assert importlib.util.find_spec("forza_tracker.garage.runner") is None
+    from forza_tracker.ui.app import TrackerDashboard
+    assert not hasattr(TrackerDashboard, "_start_garage_scan")

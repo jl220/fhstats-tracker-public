@@ -23,7 +23,6 @@ def _dashboard(language: str = "en") -> SimpleNamespace:
         _language_setting=_Value(language),
         _language_feedback=_Value(),
         _settings=SimpleNamespace(app=SimpleNamespace(language="en")),
-        _garage_worker_running=False,
         _restart_for_language=lambda: None,
     )
 
@@ -50,26 +49,3 @@ def test_language_selector_saves_and_restarts_when_confirmed(
     assert saved[0][0] == "es"
     assert dashboard._config_path == tmp_path / "tracker.local.yaml"
     assert restarted == [True]
-
-
-def test_language_selector_defers_restart_while_automation_is_running(
-    monkeypatch,
-    tmp_path: Path,
-) -> None:
-    configure_language("en")
-    dashboard = _dashboard("es")
-    dashboard._garage_worker_running = True
-    monkeypatch.setattr(
-        tracker_app,
-        "save_language",
-        lambda *_args, **_kwargs: tmp_path / "tracker.local.yaml",
-    )
-    monkeypatch.setattr(
-        tracker_app.messagebox,
-        "askyesno",
-        lambda *_args, **_kwargs: (_ for _ in ()).throw(AssertionError("restart prompt must be deferred")),
-    )
-
-    tracker_app.TrackerDashboard._save_language_setting(dashboard)
-
-    assert "next start" in dashboard._language_feedback.value

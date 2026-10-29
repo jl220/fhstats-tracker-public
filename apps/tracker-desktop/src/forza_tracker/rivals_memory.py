@@ -196,10 +196,8 @@ class RivalsMemoryReader:
                 self._pid, self._base = pid, base
                 self._retry_at = 0.0
                 try:
-                    if self._backend.file_version(image_path) != EXPECTED_BUILD:
-                        self._failure_status = "unsupported"
-                        self._retry_at = time.monotonic() + self._retry_seconds
-                        return self._unknown("unsupported", pid)
+                    # Game updates alone do not make the memory layout incompatible.
+                    # Validate executable signatures and object structure instead.
                     self._handle = self._backend.open_process(pid, PROCESS_ACCESS)
                     if not self._handle:
                         return self._unknown("read_error", pid)

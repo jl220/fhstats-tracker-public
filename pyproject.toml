@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "forza-horizon-tracker"
-version = "0.4.12"
+version = "1.0.3"
 description = "Automatic Forza Horizon online race result tracker"
 requires-python = ">=3.13"
 dependencies = [

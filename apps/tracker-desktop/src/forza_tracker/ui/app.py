@@ -184,7 +184,7 @@ from forza_tracker.config.user_config import (
     write_local_config as write_user_config,
 )
 from forza_tracker.garage.export import export_fhstats_package
-from forza_tracker.garage.models import GarageCar, ScanOptions
+from forza_tracker.garage.models import GarageCar
 from forza_tracker.garage.profile_backup import (
     ProfileBackupError,
     create_profile_backup,
@@ -192,13 +192,18 @@ from forza_tracker.garage.profile_backup import (
 )
 from forza_tracker.garage.processor import save_alias
 from forza_tracker.garage.recognition import card_text_to_catalog_query
-from forza_tracker.garage.storage import GarageCountDropWarning, GarageInvalidDraftError, GarageStore
-from forza_tracker.garage.video import copy_finalized_recording
+from forza_tracker.garage.storage import GarageStore
 from forza_tracker.fhstats_client import FhstatsCatalogClient, SyncAsset
 from forza_tracker.local_catalog import data_root as local_catalog_root, load_tierlist
 from forza_tracker.rivals_runtime import RivalsRuntime, EventContextGate
+from forza_tracker.creator_runtime import CreatorEventsRuntime
+from forza_tracker.online_series_runtime import OnlineSeriesRuntime
+from forza_tracker.ui.online_series_panel import OnlineSeriesPanel
+from forza_tracker.telemetry.runtime import start_telemetry_listener_if_enabled
+from forza_tracker.ui.creator_events_panel import CreatorEventsPanel
+from forza_tracker.ui.community_home import CommunityHomePanel
 from forza_tracker.overlay.event_state import read_overlay_event
-from forza_tracker.ui.rivals_panel import RivalsLivePanel, RivalsHistoryPanel
+from forza_tracker.ui.rivals_panel import RivalsLivePanel, RivalsHistoryPanel, say
 from forza_tracker.local_recommender import recommend_championship
 from forza_tracker.overlay.runtime import OverlayRuntime
 from forza_tracker.overlay.window_win32 import enable_per_monitor_dpi_awareness
@@ -212,8 +217,6 @@ from forza_tracker.ui.garage_view_model import GarageCardView, build_garage_card
 from forza_tracker.ui.catalog_view_model import (
     build_meta_tier_sections,
 )
-from forza_tracker.garage.runner import GarageRawScanResult, run_garage_scan_script
-from forza_tracker.garage.runner import GarageRawScanResult, run_garage_scan_script
 from forza_tracker.recommendation import read_recommendation, recommendation_signature, write_recommendation
 from forza_tracker.recording.control import CONTROL_PATH, read_recording_status, send_recording_command
 from forza_tracker.restart import build_restart_command
@@ -292,7 +295,6 @@ PAGE_SPECS = (
     ("videos", "nav.videos", "▶"),
     ("tierlist", "nav.tierlist", "◆"),
     ("rivals", "nav.rivals", "⚑"),
-    ("garage", "nav.garage", "▦"),
     ("news", "nav.news", "◷"),
     ("settings", "nav.settings", "⚙"),
 )
@@ -307,9 +309,9 @@ _PAGE_ALIASES = {
     "tierlist": "tierlist",
     "meta cars": "tierlist",
     "rivals": "rivals",
-    "mi garaje": "garage",
-    "my garage": "garage",
-    "garage": "garage",
+    "mi garaje": "home",
+    "my garage": "home",
+    "garage": "home",
     "novedades": "news",
     "what's new": "news",
     "ajustes": "settings",
@@ -688,7 +690,6 @@ class TrackerDashboard(tk.Tk):
         self._profile_backup_status = LocalizedStringVar(value="Sin copia del progreso")
         self._garage_status = LocalizedStringVar(value="Sin escaneos guardados")
         self._garage_summary = LocalizedStringVar(value="0 coches")
-        self._garage_record_video = tk.BooleanVar(value=True)
         self._garage_slot = tk.StringVar(value="current")
         self._garage_query = tk.StringVar(value="")
         self._garage_manufacturer = LocalizedChoiceVar(choices={"all": "filter.all"}, value="all")
@@ -697,18 +698,21 @@ class TrackerDashboard(tk.Tk):
             choices={"all": "filter.all", "confirmed": "filter.confirmed", "review": "filter.review"},
             value="all",
         )
-        self._garage_worker_running = False
-        self._garage_stop_event: threading.Event | None = None
         self._garage_card_photos: list[ImageTk.PhotoImage] = []
         self._garage_query.trace_add("write", lambda *_args: self._refresh_garage_cards())
 
         self._rivals_runtime = rivals_runtime or RivalsRuntime(DATA_ROOT, local_catalog_root(), self._player_name.get())
+        self._creator_runtime = CreatorEventsRuntime(DATA_ROOT, self._player_name.get(), upload_enabled=self._settings.api.enabled)
+        self._online_series_runtime = OnlineSeriesRuntime(DATA_ROOT)
         self._event_context_gate = EventContextGate()
         self._rivals_profile = self._player_name.get()
         self._event_display_mode = None
         self._configure_style()
         self._build_layout()
         self._rivals_runtime.start()
+        self._metadata_telemetry = start_telemetry_listener_if_enabled(self._settings.telemetry, reuse_existing=True)
+        self._creator_runtime.start()
+        self._online_series_runtime.start()
         self.after(250, self._poll_rivals)
         self._overlay_runtime = OverlayRuntime(self, self._settings.overlay)
         self._overlay_runtime.start()
@@ -1003,6 +1007,10 @@ class TrackerDashboard(tk.Tk):
         # race dashboard above the active event. Responsive packing stays here.
         self._race_summary_host = tk.Frame(self._compact_frame, bg=COLORS["bg"])
         self._build_home_stats(self._race_summary_host)
+        self._community_home = CommunityHomePanel(self._compact_frame)
+        self._community_home.pack(fill="x", pady=(0, 12))
+        self._creator_events_panel = CreatorEventsPanel(self._compact_frame, self._creator_runtime)
+        self._creator_events_panel.pack(fill="x", pady=(0, 12))
         self._build_compact_panel(self._compact_frame)
         self.after(0, self._schedule_dashboard_layout)
 
@@ -1012,7 +1020,6 @@ class TrackerDashboard(tk.Tk):
         self._build_rivals_page(page_content["rivals"])
         self._build_tierlist_page(page_content["tierlist"])
         self._build_videos_page(page_content["videos"])
-        self._build_garage_page(page_content["garage"])
         self._build_settings_page(self._pages["settings"])
         self._news_page = NewsPage(self._pages["news"], colors=COLORS,
                                    on_check=self._check_for_updates, on_install=self._accept_available_update)
@@ -1420,6 +1427,7 @@ class TrackerDashboard(tk.Tk):
         api.setdefault("base_url", "https://fhstats.com")
         self._write_local_config(data)
         self._settings = load_settings(self._config_path)
+        self._creator_runtime.set_upload_enabled(results_enabled)
         dialog.destroy()
         self._capture_status.set(
             tr("privacy.saved_restart") if self._capture_process is not None else tr("privacy.saved")
@@ -1681,8 +1689,12 @@ class TrackerDashboard(tk.Tk):
             row.columnconfigure(index, weight=1)
 
     def _build_event_progress(self, parent: ttk.Frame) -> None:
+        self._live_details_visible = tk.BooleanVar(value=False)
+        ttk.Checkbutton(parent, text=say("Mostrar seguimiento Online y Rivals", "Show Online and Rivals tracking"),
+                        variable=self._live_details_visible, command=self._toggle_live_details).pack(anchor="w", pady=(0, 10))
         self._event_context_host = tk.Frame(parent, bg=COLORS["panel"])
-        self._event_context_host.pack(fill="both", expand=True)
+        self._online_series_panel = OnlineSeriesPanel(self._event_context_host)
+        self._online_series_panel.pack(fill="x", pady=(0, 8))
         self._rivals_live = RivalsLivePanel(self._event_context_host, self._rivals_runtime,
                                           lambda: self._show_page("rivals"))
         self._event_progress_wrapper = tk.Frame(self._event_context_host, bg=COLORS["panel"])
@@ -1748,6 +1760,13 @@ class TrackerDashboard(tk.Tk):
             self._event_slot_widgets.append(fields)
 
         self._build_recommendation_panel(wrapper)
+
+    def _toggle_live_details(self) -> None:
+        if self._live_details_visible.get():
+            self._event_context_host.pack(fill="both", expand=True)
+        else:
+            self._event_context_host.pack_forget()
+        self._sync_home_scroll_region()
 
     def _build_track_map_panel(self, parent: tk.Frame) -> None:
         panel = tk.Frame(
@@ -1925,6 +1944,7 @@ class TrackerDashboard(tk.Tk):
         if profile != self._rivals_profile:
             self._rivals_profile = profile
             self._rivals_runtime.set_profile(profile)
+            self._creator_runtime.set_profile(profile)
         state = self._rivals_runtime.snapshot()
         capture_active = self._capture_process is not None and self._capture_process.poll() is None
         mode = self._event_context_gate.select(
@@ -1945,6 +1965,8 @@ class TrackerDashboard(tk.Tk):
         if mode != "online":
             self._rivals_live.render(state, mode)
         self._rivals_history.render(state)
+        self._creator_events_panel.render(self._creator_runtime.snapshot())
+        self._online_series_panel.render(self._online_series_runtime.snapshot())
         self.after(250, self._poll_rivals)
 
     def _build_tierlist_page(self, parent: tk.Frame) -> None:
@@ -3118,50 +3140,11 @@ class TrackerDashboard(tk.Tk):
         self._build_section_header(
             wrapper,
             "Mi garaje",
-            "Guarda una copia visual de Mis coches para proteger tu coleccion y preparar fotos para FHStats.",
+            tr("garage.archive_description"),
         )
 
         controls = ttk.Frame(wrapper, style="Panel.TFrame", padding=16)
         controls.pack(fill="x")
-        tk.Label(
-            controls,
-            text="Antes de ejecutar, abre Mis coches y deja seleccionado el primer coche.",
-            bg=COLORS["panel"],
-            fg=COLORS["warning"],
-            font=("Segoe UI Semibold", 10),
-            anchor="w",
-        ).pack(fill="x")
-        actions = ttk.Frame(controls, style="Panel.TFrame")
-        actions.pack(fill="x", pady=(12, 0))
-        self._garage_scan_button = ttk.Button(
-            actions,
-            text="Escanear garaje",
-            style="Accent.TButton",
-            command=self._start_garage_scan,
-        )
-        self._garage_scan_button.pack(side="left")
-        self._garage_stop_button = ttk.Button(
-            actions,
-            text="Parar",
-            style="Danger.TButton",
-            command=self._stop_garage_scan,
-            state="disabled",
-        )
-        self._garage_stop_button.pack(side="left", padx=(8, 0))
-        ttk.Checkbutton(
-            actions,
-            text="Grabar video del recorrido",
-            variable=self._garage_record_video,
-        ).pack(side="left", padx=(16, 0))
-        tk.Label(
-            actions,
-            textvariable=self._garage_status,
-            bg=COLORS["panel"],
-            fg=COLORS["accent2"],
-            font=("Segoe UI", 9),
-            anchor="e",
-        ).pack(side="right")
-
         profile_actions = ttk.Frame(controls, style="Panel.TFrame")
         profile_actions.pack(fill="x", pady=(10, 0))
         ttk.Button(
@@ -3424,167 +3407,13 @@ class TrackerDashboard(tk.Tk):
             parent=self,
         )
 
-    def _start_garage_scan(self) -> None:
-        if self._garage_worker_running:
-            messagebox.showwarning("Mi garaje", "Ya hay un escaneo de garaje en curso.", parent=self)
-            return
-        if not _is_game_process_running():
-            messagebox.showwarning("Mi garaje", "Abre Forza Horizon y entra en Mis coches.", parent=self)
-            return
-        if self._garage_record_video.get():
-            if bool(read_recording_status().get("recording")):
-                messagebox.showwarning(
-                    "Mi garaje",
-                    "Ya hay otra grabación activa. Deténla antes de escanear el garaje.",
-                    parent=self,
-                )
-                return
-            if self._capture_process is None or self._capture_process.poll() is not None:
-                self._start_capture()
-        if self._garage_store.load_slot("draft") is not None:
-            replace_draft = messagebox.askyesno(
-                "Mi garaje",
-                "Hay un escaneo provisional anterior. ¿Deseas descartarlo e iniciar uno nuevo?",
-                parent=self,
-            )
-            if not replace_draft:
-                return
-            self._garage_store.discard_draft()
-        preserve_duplicates = messagebox.askyesno(
-            "Mi garaje",
-            "¿Deseas conservar los coches repetidos?\n\nSí: una tarjeta por coche.\nNo: agrupar por modelo.",
-            parent=self,
-        )
-        options = ScanOptions(
-            record_video=bool(self._garage_record_video.get()),
-            preserve_duplicates=preserve_duplicates,
-        )
-        self._garage_worker_running = True
-        self._garage_stop_event = threading.Event()
-        self._garage_scan_button.configure(state="disabled")
-        self._garage_stop_button.configure(state="normal")
-        self._garage_status.set("Activando Forza...")
-        settings = self._settings
-        stop_event = self._garage_stop_event
-        threading.Thread(
-            target=self._garage_scan_worker,
-            args=(settings, options, stop_event),
-            name="fhstats-garage-scan",
-            daemon=True,
-        ).start()
 
-    def _garage_scan_worker(self, settings: Any, options: ScanOptions, stop_event: threading.Event) -> None:
-        def progress(message: str) -> None:
-            self.after(0, lambda value=message: self._garage_status.set(value))
 
-        recording_path: Path | None = None
-        video_warning: str | None = None
-        if options.record_video:
-            try:
-                recording_path = self._begin_garage_recording()
-            except Exception as error:
-                video_warning = f"No se pudo iniciar el vídeo: {sanitize_error_message(str(error))}"
-        try:
-            result = run_garage_scan_script(settings, options, progress, stop_event)
-        except Exception as error:
-            message = sanitize_error_message(str(error))
-            cancelled = stop_event.is_set()
-            self.after(0, lambda value=message, stopped=cancelled: self._on_garage_scan_error(value, stopped))
-        else:
-            if recording_path is not None:
-                try:
-                    self._finish_garage_recording(recording_path)
-                except Exception as error:
-                    video_warning = f"El inventario se guardó, pero el vídeo falló: {sanitize_error_message(str(error))}"
-            self.after(
-                0,
-                lambda value=result, warning=video_warning: self._on_garage_scan_complete(value, warning),
-            )
-            return
-        if recording_path is not None:
-            try:
-                self._finish_garage_recording(recording_path)
-            except Exception:
-                pass
 
-    def _begin_garage_recording(self) -> Path:
-        if bool(read_recording_status().get("recording")):
-            raise RuntimeError("Ya existe otra grabación activa.")
-        send_recording_command("start_session")
-        deadline = time.monotonic() + 20.0
-        while time.monotonic() < deadline:
-            status = read_recording_status()
-            output_path = status.get("output_path")
-            if bool(status.get("recording")) and output_path:
-                return Path(str(output_path)).expanduser().resolve()
-            time.sleep(0.15)
-        raise RuntimeError("El capturador no confirmó el inicio en 20 segundos.")
 
-    def _finish_garage_recording(self, source: Path) -> Path:
-        send_recording_command("stop")
-        video_dir = self._garage_store.draft_path / "video"
-        destination = copy_finalized_recording(
-            source,
-            video_dir / "garage.mkv",
-            status_reader=read_recording_status,
-        )
-        draft = self._garage_store.load_slot("draft")
-        if draft is None:
-            raise GarageInvalidDraftError("El borrador desapareció antes de asociar el vídeo.")
-        self._garage_store.write_draft(replace(draft, video_path="video/garage.mkv"))
-        return destination
 
-    def _on_garage_scan_complete(self, result: GarageRawScanResult, video_warning: str | None = None) -> None:
-        try:
-            try:
-                promoted = self._garage_store.promote_draft()
-            except GarageCountDropWarning as warning:
-                confirmed = messagebox.askyesno(
-                    "Mi garaje",
-                    tr(
-                        "garage.confirm_count_drop",
-                        current_count=warning.current_count,
-                        draft_count=warning.draft_count,
-                    ),
-                    parent=self,
-                )
-                if not confirmed:
-                    self._garage_status.set("Escaneo conservado como provisional; la copia actual no cambio")
-                    return
-                promoted = self._garage_store.promote_draft(confirm_count_drop=True)
-            self._garage_slot.set("current")
-            self._garage_status.set(
-                f"Garaje guardado: {promoted.observed_count} coches en {result.elapsed_seconds:.1f} s"
-            )
-            self._refresh_garage_cards()
-            if video_warning:
-                messagebox.showwarning("Mi garaje", video_warning, parent=self)
-        except Exception as error:
-            messagebox.showerror("Mi garaje", sanitize_error_message(str(error)), parent=self)
-        finally:
-            self._finish_garage_scan()
 
-    def _on_garage_scan_error(self, message: str, cancelled: bool) -> None:
-        self._garage_status.set(
-            "Escaneo cancelado; la copia actual no cambio"
-            if cancelled
-            else tr("common.error", message=message[:100])
-        )
-        if not cancelled:
-            messagebox.showerror("Mi garaje", message, parent=self)
-        self._refresh_garage_cards()
-        self._finish_garage_scan()
 
-    def _finish_garage_scan(self) -> None:
-        self._garage_worker_running = False
-        self._garage_stop_event = None
-        self._garage_scan_button.configure(state="normal")
-        self._garage_stop_button.configure(state="disabled")
-
-    def _stop_garage_scan(self) -> None:
-        if self._garage_stop_event is not None:
-            self._garage_stop_event.set()
-            self._garage_status.set("Parando al terminar la captura actual...")
 
     def _open_garage_video(self) -> None:
         slot = "backup" if self._garage_slot.get() == "backup" else "current"
@@ -3847,7 +3676,8 @@ class TrackerDashboard(tk.Tk):
         ):
             ttk.Label(
                 telemetry_panel,
-                text=tr(setup_key),
+                text=tr(setup_key, port=self._settings.telemetry.port,
+                        host=self._settings.telemetry.host),
                 style="PanelField.TLabel" if setup_key == "telemetry.setup.route" else "PanelMuted.TLabel",
             ).pack(anchor="w", pady=(6 if setup_key == "telemetry.setup.route" else 1, 0))
         ttk.Label(
@@ -4056,9 +3886,6 @@ class TrackerDashboard(tk.Tk):
                 parent=self,
             )
             return
-        if self._garage_worker_running:
-            self._language_feedback.set(tr("settings.language.busy"))
-            return
         restart_now = messagebox.askyesno(
             tr("settings.language.saved_title"),
             tr("settings.language.saved"),
@@ -4235,7 +4062,9 @@ class TrackerDashboard(tk.Tk):
                 )
             )
         feedback_key = "recording.saved_fps_restart" if self._capture_process is not None else "recording.saved_fps"
-        self._settings_feedback.set(tr(feedback_key, fps=self._settings.recording.framerate))
+        self._settings_feedback.set(
+            tr(feedback_key, fps=self._settings.recording.framerate)
+        )
         if self._capture_process is not None:
             self._stop_capture()
             self.after(700, self._start_capture)
@@ -5557,6 +5386,8 @@ class TrackerDashboard(tk.Tk):
             return
         self._is_exiting = True
         self._rivals_runtime.stop()
+        self._creator_runtime.stop()
+        self._online_series_runtime.stop()
         self._release_video_player()
         self._stop_capture()
         if self._tray_icon is not None:

@@ -134,7 +134,7 @@ def _run_tracker(settings, api_client: ApiClient) -> None:
     race_upload = _RaceUploadState(settings.api.enabled, api_client, event_bus)
     recorder = MatchRecorder(settings.recording)
     overlay_publisher = OverlayEventPublisher()
-    telemetry_thread = start_telemetry_listener_if_enabled(settings.telemetry)
+    telemetry_thread = start_telemetry_listener_if_enabled(settings.telemetry, reuse_existing=True)
     if telemetry_thread is not None:
         logger.info("FH6 telemetry listener started on %s:%s", settings.telemetry.host, settings.telemetry.port)
     last_circuit_name: str | None = None

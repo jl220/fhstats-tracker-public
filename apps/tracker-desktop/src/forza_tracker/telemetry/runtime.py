@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import threading
+import errno
 from typing import Any, Callable
 
 from forza_tracker.telemetry.listener import listen_forza_horizon_6_udp
@@ -16,6 +17,7 @@ def start_telemetry_listener_if_enabled(
     *,
     listener: TelemetryListener = listen_forza_horizon_6_udp,
     status_writer: TelemetryStatusWriter = write_telemetry_status,
+    reuse_existing: bool = False,
 ) -> threading.Thread | None:
     if not bool(getattr(telemetry_settings, "enabled", False)):
         status_writer("disabled", message="FH6 telemetry disabled")
@@ -31,6 +33,7 @@ def start_telemetry_listener_if_enabled(
             "status_writer": status_writer,
             "host": host,
             "port": port,
+            "reuse_existing": reuse_existing,
         },
         name="fhstats-fh6-telemetry",
         daemon=True,
@@ -45,6 +48,7 @@ def _run_listener(
     status_writer: TelemetryStatusWriter,
     host: str,
     port: int,
+    reuse_existing: bool = False,
 ) -> None:
     try:
         listener(
@@ -54,4 +58,6 @@ def _run_listener(
             emit_summary=False,
         )
     except OSError as error:
+        if reuse_existing and (error.errno in {errno.EADDRINUSE, 10048} or getattr(error,'winerror',None)==10048):
+            return
         status_writer("error", message=f"FH6 telemetry listener failed: {error}")

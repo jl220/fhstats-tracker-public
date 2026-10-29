@@ -13,7 +13,6 @@ def test_page_ids_are_language_independent() -> None:
         "videos",
         "tierlist",
         "rivals",
-        "garage",
         "news",
         "settings",
     ]
@@ -24,8 +23,8 @@ def test_legacy_and_english_start_page_names_are_supported() -> None:
     assert normalize_page_id("Home") == "home"
     assert normalize_page_id("Ajustes") == "settings"
     assert normalize_page_id("Settings") == "settings"
-    assert normalize_page_id("Mi garaje") == "garage"
-    assert normalize_page_id("My Garage") == "garage"
+    assert normalize_page_id("Mi garaje") == "home"
+    assert normalize_page_id("My Garage") == "home"
     assert normalize_page_id("Novedades") == "news"
     assert normalize_page_id("What's new") == "news"
 

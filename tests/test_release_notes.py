@@ -16,6 +16,7 @@ from forza_tracker.release_notes import (
     load_cached_release,
 )
 from forza_tracker.ui.news import NewsPage
+from forza_tracker.version import APP_VERSION
 
 
 @pytest.fixture(autouse=True)
@@ -93,7 +94,9 @@ def test_installed_release_notes_are_bilingual_and_describe_current_rivals_polic
     assert "Rivals" in english
     assert "Meta Cars" in english
     assert "garage" in english.lower()
-    assert RELEASE_NOTES_VERSION == "0.4.12"
+    assert RELEASE_NOTES_VERSION == APP_VERSION
+    assert "native capture and automatic API upload" in english
+    assert "captura nativa y la subida automática por API" in spanish
     assert "Automatic Rivals event recognition" in english
     assert "Reconocimiento automático del evento de Rivals" in spanish
     assert "Clean when no invalidation is detected" in english

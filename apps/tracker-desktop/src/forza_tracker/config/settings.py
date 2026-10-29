@@ -83,6 +83,9 @@ class TelemetrySettings:
     port: int = 9999
     auto_configure: bool = False
     stale_after_seconds: float = 3.0
+    event_forwarding_enabled: bool = False
+    event_forwarding_host: str = ""
+    event_forwarding_port: int = 0
 
 
 @dataclass(frozen=True)

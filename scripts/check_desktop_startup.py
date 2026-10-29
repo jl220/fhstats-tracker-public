@@ -13,6 +13,27 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "apps/tracker-desktop/src"))
 
 
+class IdleCommunityRuntime:
+    def __init__(self, *_args, **_kwargs):
+        pass
+
+    def start(self):
+        pass
+
+    def stop(self):
+        pass
+
+    def set_profile(self, *_args):
+        pass
+
+    def set_upload_enabled(self, *_args):
+        pass
+
+    def snapshot(self):
+        return {"status": "waiting", "event": None, "current": {}, "last_series": None,
+                "class_candidates": [], "bests": [], "pending": 0, "sync_status": "waiting"}
+
+
 class IdleRivalsRuntime:
     """Supply an idle view without opening a game process or collecting data."""
 
@@ -52,7 +73,9 @@ def check_language(language: str) -> None:
 
     failures = []
     # Construct the real widget tree, keeping the diagnostic window hidden.
-    with patch.object(tracker_app.tk.Tk, "deiconify", lambda self: self.withdraw()):
+    with patch.object(tracker_app.tk.Tk, "deiconify", lambda self: self.withdraw()), \
+         patch.object(tracker_app, "CreatorEventsRuntime", IdleCommunityRuntime), \
+         patch.object(tracker_app, "OnlineSeriesRuntime", IdleCommunityRuntime):
         dashboard = tracker_app.TrackerDashboard(
             data_root / "data/history/results.jsonl", rivals_runtime=IdleRivalsRuntime()
         )
@@ -72,7 +95,7 @@ def check_language(language: str) -> None:
         dashboard._poll_rivals()
         dashboard.update_idletasks()
         assert not failures, failures
-        print(f"{language}: desktop construction, eight pages and idle Rivals polling passed")
+        print(f"{language}: desktop construction, seven pages and idle Rivals polling passed")
     finally:
         dashboard.destroy()
 

@@ -91,7 +91,8 @@ def test_telemetry_setup_copy_uses_the_tracker_listener_values() -> None:
     assert tr("telemetry.setup.route") == "Forza Horizon 6 → Settings → HUD Settings → Data Out"
     assert tr("telemetry.setup.data_out") == "Data Out: On"
     assert tr("telemetry.setup.ip") == "IP address: 127.0.0.1"
-    assert tr("telemetry.setup.port") == "Port: 9999"
+    assert tr("telemetry.setup.port", port=9999) == "Port: 9999"
+    assert tr("telemetry.setup.port", port=10001) == "Port: 10001"
     assert tr("telemetry.setup.optional").startswith("Telemetry is optional")
 
 

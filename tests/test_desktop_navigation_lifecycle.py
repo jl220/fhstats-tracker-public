@@ -14,7 +14,8 @@ def test_leaving_videos_for_garage_always_pauses_and_hides_player():
     TrackerDashboard._show_page(dashboard, "garage")
     dashboard._pause_video.assert_called_once()
     dashboard._hide_video_overlay_for_inactive_page.assert_called_once()
-    dashboard._refresh_garage_cards.assert_called_once()
+    dashboard._refresh_garage_cards.assert_not_called()
+    assert dashboard._active_page == "home"
 
 
 def test_unavailable_garage_routes_to_home():

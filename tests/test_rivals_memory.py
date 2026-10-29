@@ -230,25 +230,31 @@ def test_cached_sample_avoids_process_and_module_enumeration() -> None:
     assert backend.find_calls == 1
 
 
-def test_incompatible_build_or_signature_fails_closed() -> None:
-    for mutate in ("build", "getter", "property"):
+def test_new_build_with_compatible_memory_is_accepted() -> None:
+    backend = FakeBackend()
+    backend.build = "3.461.691.0"
+    result = RivalsMemoryReader(backend=backend).sample()
+    assert result["active"] is True
+    assert result["validity"]["dirty"] is False
+    assert backend.open_access == [0x410]
+
+
+def test_incompatible_signature_fails_closed() -> None:
+    for mutate in ("getter", "property"):
         backend = FakeBackend()
-        if mutate == "build":
-            backend.build = "3.440.854.0"
-        elif mutate == "getter":
+        if mutate == "getter":
             backend.memory[BASE + GETTER_RVA] = b"\x90" * len(GETTER_SIGNATURE)
         else:
             backend.memory[BASE + PROPERTY_RVA] = b"X" * len(PROPERTY_NAME) + b"\0"
         result = RivalsMemoryReader(backend=backend).sample()
         assert result["active"] is None
         assert result["status"] == "unsupported"
-        if mutate != "build":
-            assert backend.closed == [backend.handle]
+        assert backend.closed == [backend.handle]
 
 
 def test_unsupported_result_is_cached_during_backoff() -> None:
     backend = FakeBackend()
-    backend.build = "3.440.854.0"
+    backend.memory[BASE + GETTER_RVA] = b"\x90" * len(GETTER_SIGNATURE)
     reader = RivalsMemoryReader(backend=backend)
     assert reader.sample()["status"] == "unsupported"
     assert reader.sample()["status"] == "unsupported"

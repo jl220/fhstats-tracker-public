@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T07:46:05.215246+00:00",
+  "generated_at": "2026-10-11T06:28:36.695446+00:00",
   "game_version": "3.420.696.0",
-  "source_fingerprint": "ca2503b21f63ee87f5683bbbe5570948f35879cee225ed6009f701a4a1f27298",
-  "source_count": 660,
-  "total_web_bytes": 19796558,
+  "source_fingerprint": "5904107870444da8b8623043123f7d20560f4339fe9eee9a4c4a206ff5373d43",
+  "source_count": 682,
+  "total_web_bytes": 20462448,
   "converter": {
     "name": "ForzaTools.TexConv",
     "version": "1.0.1",
@@ -261,6 +261,29 @@
         "web_path": "/images/cars/fh6/269-1af8043c.webp",
         "web_size": 27532,
         "web_sha256": "1af8043c39e68083c100eab03e160c675d53c641bcb95b70a41f164c77c22ee2",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 278,
+      "display_name": "2006 Vauxhall Astra VXR",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 278,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_278_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "e8f892fd975fe40ba0a9158aba960e7e71a3511628889ad686793d6b5361342b"
+      },
+      "media": {
+        "car_id": 278,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "45e91062665f43371aca392866825ceedfdb6a8394b8ffb653ddce00ed331013",
+        "web_path": "/images/cars/fh6/278-d354bf72.webp",
+        "web_size": 30766,
+        "web_sha256": "d354bf72b497b2cbeb22f965d4be00c19af1ef887a93c4c2d41be4750d8f57cb",
         "oversize": false
       }
     },
@@ -721,6 +744,29 @@
         "web_path": "/images/cars/fh6/333-57330e4c.webp",
         "web_size": 32898,
         "web_sha256": "57330e4c493c7b81c6a5315a19eecbff29aa77086fcf3066ef1a0225f4389753",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 335,
+      "display_name": "2002 Lotus Esprit V8",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 335,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_335_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "a04686597ed622943c6814d4fd33eca2e04838ee7ee5cd79ee0f988acc2b7475"
+      },
+      "media": {
+        "car_id": 335,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "8c1d27bca795ead6393cdf4c91fa1297ff0775a5b9160ad8a9504d179347d7b2",
+        "web_path": "/images/cars/fh6/335-17d3a4bf.webp",
+        "web_size": 32976,
+        "web_sha256": "17d3a4bf6af06c84bd982a80fbde876aa4a8fb34deea60496b423ad914185170",
         "oversize": false
       }
     },
@@ -1434,6 +1480,29 @@
         "web_path": "/images/cars/fh6/427-86282e1b.webp",
         "web_size": 24602,
         "web_sha256": "86282e1b8f4e253ce7876d6c4a5b937bf28459ef1df1794c3a32e1a127898862",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 432,
+      "display_name": "2004 Saleen S7",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 432,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_432_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "3c82aba5670f62ac5436ba3fb5c858d733d3b784a95dcca0e2cfe95ec79937ab"
+      },
+      "media": {
+        "car_id": 432,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "4edcce5cfe4c230dbb090a82e075335ee2f3b840a84171250fea660195ee97cb",
+        "web_path": "/images/cars/fh6/432-b9e23858.webp",
+        "web_size": 28780,
+        "web_sha256": "b9e23858e30720b961d0ea2b47f77c13ab10209585ee58af5fb4b85cec1c12e6",
         "oversize": false
       }
     },
@@ -4198,6 +4267,29 @@
       }
     },
     {
+      "car_id": 1511,
+      "display_name": "1968 Holden Monaro GTS 327",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 1511,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_1511_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "ea5755b010a75ad9399a81fdf30a7de69bf30b4c4824d1cccaad3173ca167fe9"
+      },
+      "media": {
+        "car_id": 1511,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "54ccb328ae9a9b6f7c3269dbdbcce69f203c82ed11ea0734039e45b564f15397",
+        "web_path": "/images/cars/fh6/1511-8343389b.webp",
+        "web_size": 35618,
+        "web_sha256": "8343389bdc726b979965945f9619942c05dce8fc5cbbb6fe4931701e889e10fa",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 1513,
       "display_name": "1997 Maserati Ghibli",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -4355,6 +4447,29 @@
         "web_path": "/images/cars/fh6/1533-897bd088.webp",
         "web_size": 30972,
         "web_sha256": "897bd08880d4e68bcfb68e6eda9d72620cc70d8e4c5e3c17ba8a73cbbade98a1",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 1534,
+      "display_name": "1990 Jaguar XJ-S",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 1534,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_1534_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "c016fa32dfb6fe3345b67612d6167e9bcdf764d20817ec654af6a0a96269f70a"
+      },
+      "media": {
+        "car_id": 1534,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "af0f418cb94e15ec306d14c27c9f9e23f67143cb6cc237331d68e2f2f0bc91a8",
+        "web_path": "/images/cars/fh6/1534-f2d501f5.webp",
+        "web_size": 30512,
+        "web_sha256": "f2d501f53dce2765de3420d633e8a25661f03da2e2a01dd288a45771795827df",
         "oversize": false
       }
     },
@@ -5555,6 +5670,29 @@
       }
     },
     {
+      "car_id": 2157,
+      "display_name": "1970 Citroën 2CV",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 2157,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_2157_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "83ce485621031af8157831846157f1c104f1409e373f4db5b636a5396b783090"
+      },
+      "media": {
+        "car_id": 2157,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "4262edbe3c8087a08becfa0bec41fc45d768db684fa90d6084acf4e82adb92d1",
+        "web_path": "/images/cars/fh6/2157-2100a94f.webp",
+        "web_size": 26070,
+        "web_sha256": "2100a94f4148cd77ab9060666784e8177850bfb74fb2e65b32db93db24d8416c",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 2161,
       "display_name": "1965 Alfa Romeo Giulia TZ 2",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -5919,6 +6057,29 @@
         "web_path": "/images/cars/fh6/2217-18c29d01.webp",
         "web_size": 32854,
         "web_sha256": "18c29d01b8f6ec5461dc6d4de7d56ac900dd89eda6781beef5f894bb2734e71d",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 2235,
+      "display_name": "2015 Jaguar XKR-S GT",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 2235,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_2235_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "8676a2932501d6bbb4ec29a298b3bb54e3b70299a67d596031cad42f085447ee"
+      },
+      "media": {
+        "car_id": 2235,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "f196ac68b9133ad9c6499362dcab2ea5c432efb05e7ea34a053fe568d82d805a",
+        "web_path": "/images/cars/fh6/2235-325d7f5c.webp",
+        "web_size": 29100,
+        "web_sha256": "325d7f5c46495ce99f03cb781e1e54ccd23178ad116f3580c712fce5676a1986",
         "oversize": false
       }
     },
@@ -7694,6 +7855,29 @@
       }
     },
     {
+      "car_id": 2817,
+      "display_name": "2000 Honda Prelude Type SH",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 2817,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_2817_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "3f0af2628c1a7d4e0b6c9dcdf57017df8ca2b20a3c2eddcd8e9161c86a949cc7"
+      },
+      "media": {
+        "car_id": 2817,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "b4e7b7a07a0e361fb2094e1511ea761630c4b1c774653fe937d6fac7a0e18759",
+        "web_path": "/images/cars/fh6/2817-8832d1d8.webp",
+        "web_size": 26446,
+        "web_sha256": "8832d1d81aa628a6c8813efc1af002cb7a7729d4de81987707fd6bd2cb8f7b23",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 2822,
       "display_name": "1985 Nissan Safari",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -8499,6 +8683,29 @@
       }
     },
     {
+      "car_id": 3085,
+      "display_name": "2018 DeBerti Ford Mustang GT",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3085,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_3085_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "03966d06b824fddd252edda20bdaa393673fc8b1e8b24e10d56c7c9c1348106e"
+      },
+      "media": {
+        "car_id": 3085,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "f8b359eb5faab036d7edbc5674c41639ef35091c31eaf9f23850bccf85f6d420",
+        "web_path": "/images/cars/fh6/3085-5ee58f4d.webp",
+        "web_size": 28492,
+        "web_sha256": "5ee58f4d1af9ef9db5461a93c528b1525ca9cccfe4efed199ab3344fb49021c6",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 3087,
       "display_name": "2014 McLaren 650 SSpider",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -9116,6 +9323,29 @@
         "web_path": "/images/cars/fh6/3190-c4f69732.webp",
         "web_size": 34812,
         "web_sha256": "c4f6973219989ac4d16a521b0d6262a60b55b5f6aee27da565f7b5613977e742",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 3191,
+      "display_name": "1973 Lamborghini Espada 400 GT",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3191,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_3191_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "85b2b0d60e7a061bd4ef36914f90b7ca05d5c5ae5726be4d2fd2396995997cd2"
+      },
+      "media": {
+        "car_id": 3191,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "7e3d7e88b599c05abcf91738e5f4847e6055d4c5b99a09e675e1b07fc9f7f212",
+        "web_path": "/images/cars/fh6/3191-eaf0dbbf.webp",
+        "web_size": 31672,
+        "web_sha256": "eaf0dbbf0ba5772c1e46336fc6e2d4765dbdd6d4a83e011ac3db81970daa5082",
         "oversize": false
       }
     },
@@ -10132,6 +10362,29 @@
       }
     },
     {
+      "car_id": 3429,
+      "display_name": "2019 Ginetta G40 Junior",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3429,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_3429_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "cdd09b44e4e0423ad8c38c39974f31b328c872bb267dc8a708b68a44f2b8e1cb"
+      },
+      "media": {
+        "car_id": 3429,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "4e09d01fb00fd1618b89941c0688bc02917fc9b5046ea30a166295c8ca623599",
+        "web_path": "/images/cars/fh6/3429-7207e4ac.webp",
+        "web_size": 22294,
+        "web_sha256": "7207e4ac76ca0746e2459bd48dfd357b515c3b9dceb003e5394c4da448fef66d",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 3434,
       "display_name": "2020 BMW M 2 Comp",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -10799,6 +11052,29 @@
       }
     },
     {
+      "car_id": 3593,
+      "display_name": "2023 Lotus Emira",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3593,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_3593_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "ace6677674b0fa5b853484e8427d21bf810f7243f621b0a2795e1552affe5f96"
+      },
+      "media": {
+        "car_id": 3593,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "cd5303fb51c275a4e81e4caa744de37e7a82180cfb67e64ffa41b003967dfa22",
+        "web_path": "/images/cars/fh6/3593-953afa1d.webp",
+        "web_size": 30644,
+        "web_sha256": "953afa1d39eb2bcd7f10d2f42094dc7a70b9ba24680e0fb5947766aca8d334ed",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 3594,
       "display_name": "2021 Ferrari Roma",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -11117,6 +11393,29 @@
         "web_path": "/images/cars/fh6/3622-563bc492.webp",
         "web_size": 30130,
         "web_sha256": "563bc492e3e4d9b42a796356c08de579af2d998589f72b32a50eef7f1d369f9b",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 3624,
+      "display_name": "1987 Porsche 911 Carrera Coupe 'Luftauto 002'",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3624,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_3624_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "c2b247907ec7736d620012b893dc56a4f31f9da8094f4a5ce7a6e44fd3b2ab13"
+      },
+      "media": {
+        "car_id": 3624,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "51e49209050d65f1c22bd0bfc6028d57b5b7db742056dc729b4a517c8a429f83",
+        "web_path": "/images/cars/fh6/3624-45e6ea67.webp",
+        "web_size": 29922,
+        "web_sha256": "45e6ea672a0cbc0249f238aebb9d2996c6401da7920911f419423767b98ff26d",
         "oversize": false
       }
     },
@@ -11950,7 +12249,7 @@
     },
     {
       "car_id": 3759,
-      "display_name": "2022 Lamborghini Huracán EVO Spyder",
+      "display_name": "2022 Lamborghini HuracÃ¡n EVO Spyder",
       "confidence": "confirmed-by-game-asset-and-official-list",
       "source": {
         "car_id": 3759,
@@ -12455,6 +12754,29 @@
       }
     },
     {
+      "car_id": 3839,
+      "display_name": "2024 Mercedes-AMG GT 63 4Matic+",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3839,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_3839_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "f8d63e0b649146874ef4116fbdf238350cf0c0ecf9ef4eef14ffae3faf53ed0d"
+      },
+      "media": {
+        "car_id": 3839,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "1a7e9f1c3975646d442cf963f943e41efb40678a767f4598a424bba843125de0",
+        "web_path": "/images/cars/fh6/3839-0768770a.webp",
+        "web_size": 29310,
+        "web_sha256": "0768770a31000d784fe62c4f13ded7b13f4b794b2fc561f8372fec2ad9271cf3",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 3840,
       "display_name": "2023 Lamborghini Huracan Sterrato",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -12704,6 +13026,29 @@
         "web_path": "/images/cars/fh6/3856-1076894b.webp",
         "web_size": 24434,
         "web_sha256": "1076894be4e671222bbf5b522b1e4cd2aa24ec138bcd27bee9885e4f6d6cb47d",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 3857,
+      "display_name": "1990 Eunos Cosmo",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3857,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_3857_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "34cb582f38efe67e9d0e1ec3642dcb82050b19676758e8b7b11c7a17687affa7"
+      },
+      "media": {
+        "car_id": 3857,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "2dd112fb81174f2e45b51c5b0ef836d77aa587f4c1cc386bca5cef85ce7fa2a5",
+        "web_path": "/images/cars/fh6/3857-6694df67.webp",
+        "web_size": 28798,
+        "web_sha256": "6694df67baf0e08b17b6892082c906838eae189e9e1c9124e41767c791f441d2",
         "oversize": false
       }
     },
@@ -13260,6 +13605,29 @@
       }
     },
     {
+      "car_id": 3958,
+      "display_name": "2023 Dodge Challenger SRT Demon 170",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3958,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_3958_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "fbed1b015e3d739194820900d28af60e025752d5fc69dc8e84873e6bd134d0b8"
+      },
+      "media": {
+        "car_id": 3958,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "ee55ab2f2125918e2c306b57f3451e2033ffbac1b2f5913de0a1a2629931edb3",
+        "web_path": "/images/cars/fh6/3958-c360a9d4.webp",
+        "web_size": 30122,
+        "web_sha256": "c360a9d4cdd479171cd440cb33b7609633c9d2b64a6cf4d21bca533d185a9a4d",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 3959,
       "display_name": "2022 Dodge Challenger SRT",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -13325,6 +13693,29 @@
         "web_path": "/images/cars/fh6/3964-578b9fd6.webp",
         "web_size": 28622,
         "web_sha256": "578b9fd6ee613b4822a67e5e5fd16ca8aa24a623a3385f0e63946125624f970b",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 3980,
+      "display_name": "1998 Renault Sport Spider",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 3980,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_3980_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "34a3576474e8a7764c4709c42fe373b506034643570800f097ec2b535949e32f"
+      },
+      "media": {
+        "car_id": 3980,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "40701b95776dc3d560f6ded18156dd383cb28712ed09f4cf31fb77ff071e9c5d",
+        "web_path": "/images/cars/fh6/3980-249140c8.webp",
+        "web_size": 27774,
+        "web_sha256": "249140c85e090fc79a9c8ef10aa2754d850eaeb8833d7ccd71c774adce292f7f",
         "oversize": false
       }
     },
@@ -13490,6 +13881,29 @@
       }
     },
     {
+      "car_id": 4067,
+      "display_name": "2025 Bentley Continental GT Speed",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 4067,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_4067_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "bd325756421247552dbfa944ce319092e39bcc36f0f5037d5c506a305529a62e"
+      },
+      "media": {
+        "car_id": 4067,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "0e294fdf9c670d2a6adfe8b280e5260febfacc96d73b3ef931872be656f75b3f",
+        "web_path": "/images/cars/fh6/4067-5643ed39.webp",
+        "web_size": 33748,
+        "web_sha256": "5643ed3924f421b1e0fff154c730f1e84df71ed21f6a52e03e76352260cc69c3",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 4069,
       "display_name": "1988 BMW M 3",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -13651,6 +14065,29 @@
       }
     },
     {
+      "car_id": 4118,
+      "display_name": "2025 McLaren W1",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 4118,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_4118_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "47eaf3fe0e682f76994be6e534ed3f10f150093cf9bc2178eca3c7d229de671d"
+      },
+      "media": {
+        "car_id": 4118,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "40b83d3a8e6fd83a8bc912113264557e92514d0d91662f33541adfa4f1f6eb9b",
+        "web_path": "/images/cars/fh6/4118-9cc4279c.webp",
+        "web_size": 30406,
+        "web_sha256": "9cc4279c74fc35c9c5fe789a83ce4e80c16416700ee337afa33fc272fb81fdf9",
+        "oversize": false
+      }
+    },
+    {
       "car_id": 4119,
       "display_name": "1998 Nissan Skyline Autech",
       "confidence": "id-from-game-asset-name-auto-cleaned",
@@ -13670,6 +14107,29 @@
         "web_path": "/images/cars/fh6/4119-c6dc19e9.webp",
         "web_size": 28002,
         "web_sha256": "c6dc19e96a8a0f48cf8dd1f62f29a63ce1a92fbce91b7f961a3278c3e212e702",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 4122,
+      "display_name": "2025 BMW M4 CS",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 4122,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_4122_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "6278daf23976ec6bbbb84e8385d64318a323b91df0d14da979b34d1ece63ef03"
+      },
+      "media": {
+        "car_id": 4122,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "c24d9a777cc53af88b00dec3ccf4d9cf44392758d2657cae7b4b305160c0b31c",
+        "web_path": "/images/cars/fh6/4122-03a7262d.webp",
+        "web_size": 33184,
+        "web_sha256": "03a7262de02acf43befac871a1bb125891c6908f9492f57f36d4b01b245c9276",
         "oversize": false
       }
     },
@@ -14199,6 +14659,29 @@
         "web_path": "/images/cars/fh6/4179-517d275b.webp",
         "web_size": 35750,
         "web_sha256": "517d275b8abf2dbfe501ffe40e2f54351b233ba18916d34cef6c71afbef327c6",
+        "oversize": false
+      }
+    },
+    {
+      "car_id": 4188,
+      "display_name": "1972 Datsun 240Z #5 Rallye",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 4188,
+        "archive": "RC6HiRes.zip",
+        "entry": "thumbnail_4188_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "76b73ba4c8890ac44ecd04d93dc2d15dda0186669794aa3c2515467497f4b4f8"
+      },
+      "media": {
+        "car_id": 4188,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "57bc0dfbabe63ea2ede992fcb401dc13906528b34d715d3d81362328770f58db",
+        "web_path": "/images/cars/fh6/4188-c79674ea.webp",
+        "web_size": 30844,
+        "web_sha256": "c79674ea24cab5bd2dfc2987df10b73d98be72a3311cdd143eea20bc6ba3ee87",
         "oversize": false
       }
     },
@@ -15190,6 +15673,65 @@
         "web_sha256": "802af273ed8fae1b9e512acb07000e35fa977491eb8756c2b94d088d385d7742",
         "oversize": false
       }
+    },
+    {
+      "car_id": 4354,
+      "display_name": "1990 Jaguar XJ-S Forza Edition",
+      "confidence": "id-from-game-thumbnail-manually-reviewed",
+      "source": {
+        "car_id": 4354,
+        "archive": "RC5HiRes.zip",
+        "entry": "thumbnail_4354_Big.swatchbin",
+        "size": 1007820,
+        "sha256": "44d2a6f4994c410d722776c786f8afb71133ad13785a1d578feef69f6c4122eb"
+      },
+      "media": {
+        "car_id": 4354,
+        "width": 640,
+        "height": 359,
+        "has_alpha": true,
+        "master_sha256": "fed2a6899c87a87fcd8c81ac6cc9e652ed2ef48edd5d044a7e408f25bcf9c388",
+        "web_path": "/images/cars/fh6/4354-ab9bc81e.webp",
+        "web_size": 38412,
+        "web_sha256": "ab9bc81e90f8e85f92377af902eb261bc57516b064ba22c4e9c788157b72d868",
+        "oversize": false
+      }
     }
-  ]
+  ],
+  "supplemental_sources": {
+    "inventory": "var/audits/car-images-20261011-inventory.json",
+    "archives": [
+      "RC5HiRes.zip",
+      "RC6HiRes.zip"
+    ],
+    "added_car_ids": [
+      278,
+      335,
+      432,
+      1511,
+      1534,
+      2157,
+      2235,
+      2817,
+      3085,
+      3191,
+      3429,
+      3593,
+      3624,
+      3839,
+      3857,
+      3958,
+      3980,
+      4067,
+      4118,
+      4122,
+      4188,
+      4354
+    ],
+    "identity_review_sources": [
+      "https://forza.net/news/forza-horizon-6-series-5",
+      "https://forza.net/news/forza-horizon-6-series-6"
+    ],
+    "game_version": "3.461.691.0"
+  }
 }
